@@ -6,7 +6,7 @@ endclass
 module tb;
   c1 h1[];
   initial begin
-    h1 = new[5];   
+    h1 = new[5];   //allocating memory for dynamic array
     foreach (h1[i]) begin
       h1[i] = new();  
       h1[i].a = i*2;
