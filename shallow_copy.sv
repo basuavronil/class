@@ -1,3 +1,5 @@
+/*properties and methods of cascaded classes will be shared 
+main class properties and methods will be copied and not shared */
 class c1;
   int a;
   int b;
