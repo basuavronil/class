@@ -49,6 +49,8 @@ a = 1 b = 2  c= 3  d=4
 /*
 a = 30 b = 40  c= 10  d=20
 a = 1 b = 2  c= 3  d=4
+everything is getting copied and nothing is getting shared 
+so h4 is showing the overridden values and not any shared values
 */
 
     
@@ -58,6 +60,8 @@ a = 1 b = 2  c= 3  d=4
     /*
     a = 1 b = 2  c= 3  d=4
     a = 1 b = 2  c= 3  d=4
+    h4.copy(h3) resets the over riding and shows initial values when h4 is formed 
+    that is it shows the values of h3
     */
   end
 endmodule
