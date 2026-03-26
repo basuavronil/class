@@ -3,7 +3,7 @@ class c1;
   bit [3:0] b;
 endclass
 module tb;
-  c1 h1[int];  
+  c1 h1[int];  // associative array handle declaration with only index 
   initial begin
     foreach (h1[i]) begin end  
     for (int i = 0; i < 5; i++) begin
