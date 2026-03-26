@@ -24,10 +24,14 @@ module tb;
     h2.d = 4;
     h2.h1.a = 1;
     h2.h1.b = 2;
-    h3 = new h2;
+    h3 = new h2;   // shallow copy
     h2.display();
     h3.display();
     
+    /*
+a= 1  b = 2  c= 3 d =4
+a= 1  b = 2  c= 3 d =4
+    */
     
     h3.h1.a = 10;
     h3.h1.b = 15;
@@ -35,10 +39,21 @@ module tb;
     h3.d = 6;
     h3.display();
     h2.display();
+
+    /*
+a= 10  b = 15  c= 5 d =6
+a= 10  b = 15  c= 3 d =4
+    */
     
     h3 = new h2;
     h3.display();
-    h2.display(); 
+    h2.display();
+
+    /*
+a= 10  b = 15  c= 3 d =4
+a= 10  b = 15  c= 3 d =4
+    */
+    
   end
 endmodule
 /*
