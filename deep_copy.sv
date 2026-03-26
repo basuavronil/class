@@ -12,7 +12,7 @@ class c2;
   endfunction
   
   function copy (c2 h2);
-    this.c = h2.c ;
+    this.c = h2.c ;          
     this.d = h2.d;
     this.h1.a = h2.h1.a;
     this.h1.b = h2.h1.b;
@@ -32,9 +32,13 @@ module tb;
     h3.h1.a = 1;
     h3.h1.b = 2;
     h3.display();
-    h4 = new();
-    h4.copy(h3);
+    h4 = new();  // creating memory for h4 which is not in shallow copy 
+    h4.copy(h3); // deep copying
     h4.display();
+    /* 
+a = 1 b = 2  c= 3  d=4
+a = 1 b = 2  c= 3  d=4
+    */
     
     h4.c = 10;
     h4.d = 20;
@@ -42,12 +46,20 @@ module tb;
     h4.h1.b = 40;
     h4.display();
     h3.display();
-  end
-endmodule
 /*
-a = 1 b = 2  c= 3  d=4
-a = 1 b = 2  c= 3  d=4
 a = 30 b = 40  c= 10  d=20
 a = 1 b = 2  c= 3  d=4
 */
+
+    
+    h4.copy(h3);
+    h4.display();
+
+    /*
+    a = 1 b = 2  c= 3  d=4
+    a = 1 b = 2  c= 3  d=4
+    */
+  end
+endmodule
+
     
