@@ -38,3 +38,25 @@ b = 2
 b = 3
 b = 4
 */
+
+// Example 2
+
+class c1;
+  int a;
+  int b;
+  
+  static function int add (int a, int b);
+    int c;
+    c = a + b;
+    $display("c = %0d", c);
+    return c;
+  endfunction
+endclass
+
+module tb;
+  c1 h1;
+  initial begin
+    c1 :: add (2,3);
+  end
+endmodule
+    
