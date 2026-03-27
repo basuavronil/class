@@ -1,22 +1,31 @@
-a constructor must not have a return type 
+
+/*a constructor must not have a return type 
  it should not return anything
  
  the main function of a constructor is to 
-
-
- 1. Assign values to class properties 
  
- class c1;
+ 1. Assign values to class properties ... store values in class properties */
+ 
+class c1;
   int a;
   int b;
-  function new(int x, int y);
-    this.a = x;   // assigning input to property
-    this.b = y;
+  int c;
+  
+  function new(int a, int b); //constructor   
+    this.a = a ;
+    this.b = b;
+    this.c = a + b;
+    $display ("a= %0d b = %0d c = %0d ", a, b, c);
   endfunction
 endclass
+module tb;
+  c1 h1;
+  initial begin
+    h1 = new(3,4);
+  end
+endmodule
 
-
-2. allocate memories for inner object 
+/*2. allocate memories for inner object */
 
 class inner;
   int data;
@@ -28,8 +37,7 @@ class outer;
   endfunction
 endclass
 
-
-3. Set default Values 
+/ *3. Set default Values */
 
 class packet;
   int addr;
@@ -41,3 +49,6 @@ class packet;
   endfunction
 endclass
 
+
+
+    
