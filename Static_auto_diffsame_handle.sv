@@ -68,3 +68,27 @@ a = 3
 b = 3
 c = 3
 */
+class c1;
+  static int t1;
+  int t2;
+  function new ();
+    t1++;
+    t2++;
+    $display( " t1 = %0d  t2 = %0d", t1, t2);
+  endfunction
+endclass
+module test;
+  c1 h[5];
+  initial begin
+    foreach (h[i]) begin
+      h[i] = new();
+    end
+  end
+endmodule
+/*
+ t1 = 1  t2 = 1
+ t1 = 2  t2 = 1
+ t1 = 3  t2 = 1
+ t1 = 4  t2 = 1
+ t1 = 5  t2 = 1
+*/
