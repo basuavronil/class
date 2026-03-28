@@ -1,3 +1,5 @@
+// When given the same memory location static and dynamic variables will both increment as they are getting stored
+// inside the same memory
 class c1;
   int a;
   static int b;
@@ -33,7 +35,11 @@ a = 1
 b = 3
 c = 1
 */
-lass c1;
+
+
+//when given a different memory location wrt handle static will increment as the previous value gets stores
+// while dynamic will form new memory every time and as a result it wont update 
+class c1;
   int a;
   static int b;
   int c;
