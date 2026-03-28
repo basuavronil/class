@@ -1,3 +1,5 @@
+// we can only use scope resolution when we call a static function
+// we dont need any handle name .. we can just do class_name::property
 class c1;
   int a;
   static int b;
