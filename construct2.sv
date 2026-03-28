@@ -1,3 +1,4 @@
+//Constructor used to 
 class transaction;
   bit [31:0] data;
   int id;
